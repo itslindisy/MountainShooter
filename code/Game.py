@@ -7,6 +7,7 @@ from code.Level import Level
 from code.Menu import Menu
 
 
+
 class Game:
     def __init__(self):
         pygame.init()
