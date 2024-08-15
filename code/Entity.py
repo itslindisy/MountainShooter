@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+
 from abc import ABC, abstractmethod
 
 import pygame.image
@@ -22,4 +22,3 @@ class Entity(ABC):
     @abstractmethod
     def move(self, ):
         pass
-
