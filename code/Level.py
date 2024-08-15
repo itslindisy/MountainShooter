@@ -32,6 +32,7 @@ class Level:
             player.score = player_score[1]
             self.entity_list.append(player)
         pygame.time.set_timer(EVENT_ENEMY, SPAWN_TIME)
+
         pygame.time.set_timer(EVENT_TIMEOUT, TIMEOUT_STEP)
 
     def run(self, player_score: list[int]):
@@ -67,7 +68,7 @@ class Level:
                                 player_score[0] = ent.score
                             if isinstance(ent, Player) and ent.name == 'Player2':
                                 player_score[1] = ent.score
-                        return False
+                        return True
 
                 found_player = False
                 for ent in self.entity_list:

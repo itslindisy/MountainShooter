@@ -2,21 +2,10 @@
 import pygame
 
 C_ORANGE = (255, 128, 0)
-C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 255, 128)
-C_GREEN = (0, 120, 0)
+C_WHITE = (255, 255, 255)
+C_GREEN = (0, 128, 0)
 C_CYAN = (0, 128, 128)
-
-# W
-WIN_WIDTH = 576
-WIN_HEIGHT = 324
-
-# M
-MENU_OPTION = ('NEW GAME 1P',
-               'NEW GAME 2P - COOPERATIVE',
-               'NEW GAME 2P - COMPETITIVE',
-               'SCORE',
-               'EXIT')
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -44,7 +33,6 @@ ENTITY_SPEED = {
     'Enemy2Shot': 2,
 }
 
-
 ENTITY_HEALTH = {
     'Level1Bg0': 999,
     'Level1Bg1': 999,
@@ -66,14 +54,6 @@ ENTITY_HEALTH = {
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1,
-}
-
-
-ENTITY_SHOT_DELAY = {
-    'Player1': 20,
-    'Player2': 15,
-    'Enemy1': 100,
-    'Enemy2': 200,
 }
 
 ENTITY_DAMAGE = {
@@ -122,6 +102,20 @@ ENTITY_SCORE = {
     'Enemy2Shot': 0,
 }
 
+ENTITY_SHOT_DELAY = {
+    'Player1': 20,
+    'Player2': 15,
+    'Enemy1': 100,
+    'Enemy2': 200,
+}
+
+# M
+MENU_OPTION = ('NEW GAME 1P',
+               'NEW GAME 2P - COOPERATIVE',
+               'NEW GAME 2P - COMPETITIVE',
+               'SCORE',
+               'EXIT')
+
 # P
 PLAYER_KEY_UP = {'Player1': pygame.K_UP,
                  'Player2': pygame.K_w}
@@ -138,6 +132,27 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
 SPAWN_TIME = 4000
 
 # T
+TIMEOUT_STEP = 100  # 100ms
+TIMEOUT_LEVEL = 20000  # 20s
+# W
+WIN_WIDTH = 576
+WIN_HEIGHT = 324
 
-TIMEOUT_STEP = 100
-TIMEOUT_LEVEL = 20000
+# S
+
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH / 2, 110),
+             1: (WIN_WIDTH / 2, 130),
+             2: (WIN_WIDTH / 2, 150),
+             3: (WIN_WIDTH / 2, 170),
+             4: (WIN_WIDTH / 2, 190),
+             5: (WIN_WIDTH / 2, 210),
+             6: (WIN_WIDTH / 2, 230),
+             7: (WIN_WIDTH / 2, 250),
+             8: (WIN_WIDTH / 2, 270),
+             9: (WIN_WIDTH / 2, 290),
+             }
+
