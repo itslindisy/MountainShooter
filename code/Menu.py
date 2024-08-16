@@ -1,10 +1,10 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+
 import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
+from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW, WIN_HEIGHT
 
 
 class Menu:
@@ -21,6 +21,8 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
+            self.menu_text(15, "NOME: Mariana da Silva Ferreira", C_WHITE, (90, WIN_HEIGHT - 25))
+            self.menu_text(15, "RU: 4823065", C_WHITE, (40, WIN_HEIGHT - 10))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
